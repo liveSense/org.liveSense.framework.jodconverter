@@ -4,7 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.artofsolving.jodconverter</groupId>
+	<parent>
+		<groupId>com.github.livesense</groupId>
+		<artifactId>org.liveSense.parent</artifactId>
+		<version>2-SNAPSHOT</version>
+		<relativePath>../../org.liveSense.parent</relativePath>
+	</parent>
+
   <artifactId>jodconverter-core</artifactId>
   <version>3.0-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -123,11 +129,14 @@
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
+      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.7.2</version>
         <configuration>
+					<skipTests>true</skipTests>
+
           <!-- don't run tests in parallel -->
           <perCoreThreadCount>false</perCoreThreadCount>
           <threadCount>1</threadCount>

@@ -4,7 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.artofsolving.jodconverter</groupId>
+	<parent>
+		<groupId>com.github.livesense</groupId>
+		<artifactId>org.liveSense.parent</artifactId>
+		<version>2-SNAPSHOT</version>
+		<relativePath>../../org.liveSense.parent</relativePath>
+	</parent>
+
   <artifactId>jodconverter-sample-webapp</artifactId>
   <version>3.0-SNAPSHOT</version>
   <packaging>war</packaging>
@@ -84,7 +90,24 @@
           <contextPath>/converter</contextPath>
         </configuration>
       </plugin>
+      
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<configuration>
+				<webResources>
+					<resource>
+						<directory>${project.build.directory}/classes/META-INF</directory>
+						<targetPath>META-INF</targetPath>
+						<includes>
+							<include>LICENSE*</include>
+							<include>NOTICE*</include>
+							<include>DISCLAIMER</include>
+						</includes>
+					</resource>
+				</webResources>
+			</configuration>
+		</plugin>
     </plugins>
   </build>
-
 </project>

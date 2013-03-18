@@ -28,7 +28,7 @@
 
 	<artifactId>jodconverter-reactor</artifactId>
 	<packaging>pom</packaging>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>3.0-SNAPSHOT</version>
 	<name>JODConverter reactor</name>
 	<description>
 		JODConverter framework - Reactor
@@ -39,6 +39,7 @@
 		<module>jodconverter-sample-webapp</module>
 		<module>jodconverter-osgi</module>
 	</modules>
+
 </project>
 
 
