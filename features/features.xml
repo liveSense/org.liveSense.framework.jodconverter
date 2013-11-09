@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><features name="liveSense-${liveSense.version}-framework-jodconverter" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+	<feature name="liveSense-framework-jodconverter" version="${liveSense.framework.jodconverter.version}" description="liveSense framework jodconverter">
+        <feature>liveSense-core-apache-commons</feature>
+        <feature>liveSense-fragment-sun-misc</feature>
+        <bundle dependency="true">mvn:org.apache.geronimo.bundles/json/20090211_1</bundle>
+		<bundle>mvn:com.github.livesense/org.liveSense.framework.jodconverter-osgi/${liveSense.framework.jodconverter.version}</bundle>
+	</feature>
+</features>
