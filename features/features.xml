@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><features name="liveSense-${liveSense.version}-framework-jodconverter" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="liveSense-${liveSense.version}-framework-jodconverter" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
 	<feature name="liveSense-framework-jodconverter" version="${liveSense.framework.jodconverter.version}" description="liveSense framework jodconverter">
         <feature>liveSense-core-apache-commons</feature>
         <feature>liveSense-fragment-sun-misc</feature>
