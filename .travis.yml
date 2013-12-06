@@ -2,6 +2,7 @@ language: java
 before_install:
 - curl https://raw.github.com/liveSense/all/master/travis-settings.xml --create-dirs
   -o target/travis/settings.xml
+jdk:
 - openjdk6
 script:
 - mvn deploy --settings target/travis/settings.xml
