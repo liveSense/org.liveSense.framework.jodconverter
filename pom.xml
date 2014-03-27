@@ -25,6 +25,11 @@
 		<version>2-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
+	<scm>
+		<connection>scm:git:https://github.com/liveSense/org.liveSense.framework.jodconverter.git</connection>
+		<developerConnection>scm:git:https://github.com/liveSense/org.liveSense.framework.jodconverter.git</developerConnection>
+		<url>https://github.com/liveSense/org.liveSense.framework.jodconverter</url>
+	</scm>
 
 	<artifactId>org.liveSense.framework.jodconverter</artifactId>
 	<packaging>pom</packaging>
