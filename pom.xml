@@ -25,12 +25,13 @@
         <version>1.0.3</version>
 		<relativePath>..</relativePath>
 	</parent>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
 	<scm>
 		<connection>scm:git:https://github.com/liveSense/org.liveSense.framework.jodconverter.git</connection>
 		<developerConnection>scm:git:https://github.com/liveSense/org.liveSense.framework.jodconverter.git</developerConnection>
 		<url>https://github.com/liveSense/org.liveSense.framework.jodconverter</url>
-	</scm>
+	  <tag>1.0.3</tag>
+  </scm>
 
 	<artifactId>org.liveSense.framework.jodconverter</artifactId>
 	<packaging>pom</packaging>
