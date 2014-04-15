@@ -21,14 +21,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.github.livesense</groupId>
-		<artifactId>org.liveSense.parent</artifactId>
-		<version>2-SNAPSHOT</version>
-		<relativePath>../..</relativePath>
+        <artifactId>org.liveSense.framework.jodconverter</artifactId>
+        <version>1.0.3-SNAPSHOT</version>
+		<relativePath>../</relativePath>
 	</parent>
 
 	<artifactId>org.liveSense.framework.jodconverter-osgi</artifactId>
 	<packaging>bundle</packaging>
-	<version>3.0-SNAPSHOT_1-SNAPSHOT</version>
 	<name>liveSense :: Framework :: JODConverter</name>
 	<description>
 		liveSense JODConverter framework - uses OpenOffice / LibreOffice

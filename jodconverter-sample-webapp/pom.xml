@@ -4,15 +4,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.github.livesense</groupId>
-		<artifactId>org.liveSense.parent</artifactId>
-		<version>2-SNAPSHOT</version>
-		<relativePath>../../org.liveSense.parent</relativePath>
-	</parent>
+<parent>
+    <groupId>com.github.livesense</groupId>
+    <artifactId>org.liveSense.framework.jodconverter</artifactId>
+    <version>1.0.3-SNAPSHOT</version>
+    <relativePath>../</relativePath>
+</parent>
 
   <artifactId>jodconverter-sample-webapp</artifactId>
-  <version>3.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <name>JODConverter - Sample Web Application</name>
