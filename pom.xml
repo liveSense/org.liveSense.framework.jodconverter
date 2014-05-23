@@ -45,6 +45,20 @@
 		<module>jodconverter-sample-webapp</module>
 		<module>jodconverter-osgi</module>
 	</modules>
+    <repositories>
+        <!-- JBOSS repo -->
+		<repository>
+			<id>jboss.release</id>
+			<name>FuseSource snapshot repository</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public-jboss</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+    </repositories>
 
 </project>
 
