@@ -1,14 +1,18 @@
 language: java
-
-env:
-  - secure: j/GNefjtIMaDm/pNBlShIyX/IU72AweQv6ia5RQHUkasBlGJ80vusGfkYoeo1wrXxriSB8p/X9mdeTJyjKk4q6fqK3tD5P7LY6bqxPSOyF1DOQiQBc3Bb+4B2Gob70pcHXntueMvmx7YT2/OlGO5jgAdVQ3aQ/Po+egQDS2miEL7uRqFHWo7EGi+6mPUfBVRDycrXmHdcGeAABIhYbiv7DlFEC2s7IbH7KSBXWOJrxmzie5rC11sxldzaaoIWCH7RFKjPNh7OoTTY/qHM9i5qTGEgCsiWxxHZvKvJ69cJPkx7hQ3P+YJrHCPUsF2HEE18qY/k2K3yZixUGPVCRATyg==
-
-before_install:
-  - curl -L https://raw.github.com/liveSense/all/master/shippable-settings.xml --create-dirs -o target/shippable/settings.xml
-
 jdk:
   - oraclejdk7
  
+env:
+  - secure: pyElBtE/QQP6vA2kW06sf5zYSU77MgFn72FWNZo2gTKJ4vud0upMu7AABcTIIMXBxjQnLNp06n5bs+Uiowe6L/f9dXAvc5XFhoJO815DBPBXodTJbqRDG8nMguoLHesFauiUTVTJteneVRH1QFRZ1wwvtBhpX+r4kNFt9Gr+GjW1OgG/LoV8fABeVx4heozb1jEHHkeLHtvW+dvgTU3SUjFBLHd9mpgVfhMKvR5nOon1xn8cOKgbvMJ90fwmHCadfVaL7FwMtIJE57YVaNOhjO1rUC1IIwLjkxcTBzLmhNId421uEwMVz97YXRsiQAH1EVrd5Lgzj8H6CT9GZlKa/A==
+  
+before_install:
+  - curl -L https://raw.github.com/liveSense/all/master/shippable-settings.xml -o /tmp/settings.xml
+
 install:
-  - mvn deploy --settings target/shippable/settings.xml
+  - mvn deploy --settings /tmp/settings.xml
+
+after_failure:
+  - curl -L http://mspanc.github.io/shippable-slack-notifier/notify.py -o /tmp/notify.py; python /tmp/notify.py --slack-url $SLACK_URL --message failure
+after_success:
+  - curl -L http://mspanc.github.io/shippable-slack-notifier/notify.py -o /tmp/notify.py; python /tmp/notify.py --slack-url $SLACK_URL --message success
  
